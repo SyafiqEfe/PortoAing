@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -22,12 +23,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 100px;
+  padding: 30px 20px;
   z-index: 10;
 }
 
+.nav-wrapper {
+  flex: 1; 
+  display: flex;
+  justify-content: center; 
+}
+
 .logo {
-  font-size: 40px;
+  font-size: 30px; 
   color: #ffffff;
   letter-spacing: 1px;
   font-weight: 800;
@@ -35,13 +42,17 @@ header {
 
 .nav {
   display: flex;
+  justify-content: center; 
+  gap: 30px; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
 .nav li {
   list-style: none;
-  margin: 0 10px;
-}
+  margin: 0 5px;
 
+}
 .nav li a {
   color: #ffffff;
   text-decoration: none;
@@ -57,23 +68,19 @@ header {
 
 .search {
   position: relative;
-  width: 300px;
-  height: 40px;
+  width: 200px; 
+  height: 30px; 
 }
 
 .search input {
-  position: relative;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
   color: #ffffff;
   background: transparent;
-  border: 1 solid rgba(255, 255, 255, 0, 5);
   outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5); 
   border-radius: 4px;
-  padding: 0 10px 0 45px !important;
-  backdrop-filter: blur(10px);
+  padding: 0 10px;
 }
 
 .search input::placeholder {
@@ -85,18 +92,16 @@ header {
   top: 50%;
   transform: translateY(-50%);
   left: 10px;
-  padding-right: 10px;
   color: #ffffff;
-  border-right: 1px solid #ffffff;
 }
 
 .banner {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 0 100px;
+  padding: 0 20px; 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: url("./img/movies/bg-the-covenant.webp") no-repeat;
   background-size: cover;
@@ -111,14 +116,12 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
 
 .content {
   position: relative;
-  max-width: 550px;
+  max-width: 90%; 
   display: none;
   visibility: hidden;
   transform: scale(0);
@@ -133,16 +136,17 @@ header {
 }
 
 .movie-title {
-  max-width: 250px;
+  max-width: 100%; 
 }
 
 .banner .content h4 {
   color: rgba(255, 255, 255, 0.5);
   font-weight: 400;
-  font-size: 30px;
+  font-size: 24px; 
 }
+
 .banner .content h4 span {
-  padding: 0 10px;
+  padding: 0 5px; 
   border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -163,24 +167,19 @@ header {
 }
 
 .banner .content p {
-  font-size: 1em;
+  font-size: 0.9em; 
   font-weight: 300;
   line-height: 1.5em;
   color: #ffffff;
   margin: 10px 0 20px;
 }
 
-.banner .content .button {
-  position: relative;
-}
-
 .banner .content .button a {
-  position: relative;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 5px; 
   background: var(--primary);
   color: #ffffff;
-  padding: 6px 20px;
+  padding: 5px 15px; 
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 1px;
@@ -189,18 +188,9 @@ header {
   cursor: pointer;
 }
 
-.banner .content .button a:nth-child(2) {
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.banner .content .button a:hover:nth-child(2) {
-  background: var(--primary);
-}
-
 .banner .carousel-box {
   position: relative;
-  min-width: 750px;
+  width: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,31 +199,50 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   border-radius: 10px;
+  margin: 20px 0; 
+}
+.banner .content .movie-title {
+  width: 100%; 
+  max-height: 150px; 
+  object-fit: contain; 
 }
 
 .carousel {
-  position: relative;
-  height: 450px;
-  perspective: 1000;
+  height: 500px; 
 }
 
 .carousel .carousel-item {
-  width: 250px;
+  flex: 1; 
+  max-width: 150px; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.carousel .carousel-item img {
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: contain;
+}
+
+.carousel {
+  height: 300px; 
+}
+
+.carousel .carousel-item {
+  width: 150px; 
   cursor: pointer;
 }
 
 .carousel .carousel-item img {
-  max-width: 235px;
+  max-width: 100%;
   border-radius: 10px;
-  transform: translateX(8px) translateY(-100px);
-  object-fit: cover;
-  object-position: center;
 }
 
 .play {
   position: absolute;
   bottom: 50px;
-  left: 100px;
+  left: 20px; 
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
@@ -242,15 +251,12 @@ header {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
-  font-size: 1.2em;
-  cursor: pointer !important;
-  transition: 0.3s;
+  font-size: 1em; 
 }
 
 .play i {
-  margin-right: 10px;
-  font-size: 40px;
-  cursor: pointer !important;
+  margin-right: 5px; 
+  font-size: 30px; 
 }
 
 .play:hover {
@@ -260,11 +266,11 @@ header {
 .sci {
   position: absolute;
   bottom: 50px;
-  right: 100px;
+  right: 20px; 
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 10px; 
 }
 
 .sci a {
@@ -273,7 +279,7 @@ header {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
-  font-size: 25px;
+  font-size: 20px; 
   transition: 0.3s;
   cursor: pointer;
 }
@@ -288,8 +294,8 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
-  width: 100%;
-  height: 100%;
+  width: 90%; 
+  height: 90%; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -305,7 +311,7 @@ header {
 }
 
 .trailer video {
-  max-width: 900px;
+  max-width: 100%;
   outline: none;
 }
 
@@ -318,102 +324,133 @@ header {
   max-width: 30px;
 }
 
-/* Untuk layar tablet (768px - 1024px) */
-@media (max-width: 1024px) {
-  header {
-    padding: 20px 50px;
-  }
 
-  .banner {
-    padding: 0 50px;
-    flex-direction: column;
-    min-height: 80vh;
-  }
 
-  .content {
-    max-width: 450px;
-  }
-
-  .carousel-box {
-    min-width: 650px;
-  }
-
-  .search {
-    width: 200px;
-  }
-}
-
-/* Untuk layar HP (maks 768px) */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 20px;
   }
 
   .logo {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-
-  .nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .nav li {
-    margin: 5px;
+    font-size: 24px; 
   }
 
   .search {
-    width: 100%;
-    margin-top: 10px;
+    width: 100%; 
   }
 
   .banner {
-    padding: 0 20px;
-    min-height: 70vh;
-    flex-direction: column;
+    padding: 0 10px;
   }
 
-  .content {
-    text-align: center;
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .movie-title {
-    max-width: 200px;
-  }
-
-  .carousel-box {
-    min-width: 300px;
-    height: auto;
-  }
-
-  .carousel .carousel-item img {
-    max-width: 180px;
-    transform: translateX(0) translateY(-50px);
-  }
-
-  .play {
-    bottom: 20px;
-    left: 20px;
-    font-size: 1em;
-  }
-
-  .sci {
-    bottom: 20px;
-    right: 20px;
-    gap: 15px;
-  }
-
-  .sci a {
+  .banner .content h4 {
     font-size: 20px;
   }
 
-  .trailer video {
-    max-width: 100%;
+  .banner .content p {
+    font-size: 0.8em; 
+  }
+
+  .banner .content .button a {
+    padding: 5px 10px; 
+  }
+
+  .carousel {
+    height: 200px; 
+  }
+
+  .carousel .carousel-item {
+    width: 120px; 
+  }
+
+  .play,
+  .sci {
+    font-size: 0.9em; 
+  }
+
+  .trailer {
+    width: 95%; 
+    height: 95%; 
   }
 }
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 18px; 
+  }
+}
+
+#hamburger-menu {
+  display: none; 
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 70%; 
+  height: 100%;
+  background-color: #000;
+  transition: left 0.3s ease-in-out;
+  z-index: 20;
+  padding: 20px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin: 20px 0;
+}
+
+.sidebar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+
+.sidebar-menu li a:hover {
+  background-color: #1a1a1a; 
+  color: #ff6347; 
+  border-radius: 5px; /
+}
+.close-btn {
+  font-size: 24px;
+  color: white;
+  text-align: right;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+  #hamburger-menu {
+    display: block;
+  }
+
+  .nav {
+    display: none; 
+  }
+}
+@media (max-width: 768px) {
+  .nav-wrapper {
+    display: none; 
+  }
+
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px;
+  }
+}
+
+

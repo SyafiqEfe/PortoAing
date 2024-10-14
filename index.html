@@ -16,19 +16,28 @@
     <header>
       <a href="#" class="logo">I Movies</a>
       <ul class="nav">
-        <li>
-          <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
-        </li>
+        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
         <li><a href="#">Adults</a></li>
         <li><a href="#">Kids</a></li>
         <li><a href="#">Trend</a></li>
-        <li><a href="#">My list</a></li>
+        <li><a href="#">My List</a></li>
       </ul>
-      <div class="search">
-        <input type="text" placeholder="search" />
-        <i class="fa fa-search" aria-hidden="true"></i>
-      </div>
+      <a href="#" id="hamburger-menu" class="hamburger">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </a>
     </header>
+
+    <div id="sidebar" class="sidebar">
+      <div class="close-btn">&times;</div>
+      <ul class="sidebar-menu">
+        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li><a href="#">Adults</a></li>
+        <li><a href="#">Kids</a></li>
+        <li><a href="#">Trend</a></li>
+        <li><a href="#">My List</a></li>
+      </ul>
+    </div>
+    
     <div class="banner">
       <div class="content the-covenant active">
         <img src="./img/the-covenant-title.webp" alt="" class="movie-title" />
@@ -187,7 +196,7 @@
     <script>
       $(document).ready(function () {
         $(".carousel").carousel();
-      });
+      });zz
     </script>
   </body>
 </html>

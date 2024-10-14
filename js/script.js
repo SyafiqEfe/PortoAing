@@ -24,3 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelector(".trailer").style.display = "none";
 });
+
+// JavaScript to toggle sidebar visibility
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const sidebar = document.getElementById("sidebar");
+const closeBtn = document.querySelector(".close-btn");
+
+hamburgerMenu.addEventListener("click", () => {
+  sidebar.style.left = "0"; // Slide in the sidebar
+});
+
+closeBtn.addEventListener("click", () => {
+  sidebar.style.left = "-100%"; // Slide out the sidebar
+});
